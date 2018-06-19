@@ -6,7 +6,7 @@
       <OverviewItem class="mt-lg-0 mt-3" data="41,880" title="NET INCOME"/>
     </div>
     <div class="row pt-5">
-      <Chart/>
+      <LineChart/>
     </div>
     <div class="row pt-5">
       <Transaction/>
@@ -18,7 +18,7 @@
 <script>
 // @ is an alias to /src
 import OverviewItem from '@/components/OverviewItem.vue'
-import Chart from '@/components/Chart.vue'
+import LineChart from '@/components/LineChart.vue'
 import Transaction from '@/components/Transaction.vue'
 import Latest from '@/components/Latest.vue'
 
@@ -26,7 +26,7 @@ export default {
   name: 'home',
   components: {
     OverviewItem,
-    Chart,
+    LineChart,
     Transaction,
     Latest
   }
