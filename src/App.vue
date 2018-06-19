@@ -1,29 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+        <router-link class="navbar-brand mr-5" style="color: #4680ff" to="/">Dashboard</router-link>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item mr-3">
+              <router-link class="nav-link active" to="/">Home</router-link>
+            </li>
+            <li class="nav-item mr-3">
+              <router-link class="nav-link" to="/">Orders</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/">Producs</router-link>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </nav>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #4680ff !important;
   }
-}
+  .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: #4680ff !important;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #99abb4 !important;
+  }
+  nav {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
 </style>
